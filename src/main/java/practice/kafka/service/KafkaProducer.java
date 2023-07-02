@@ -16,7 +16,7 @@ public class KafkaProducer {
     @Value(value = "test")
     private String topicName;
 
-    private final KafkaTemplate<String, String> kafkaTemplate;
+    private final KafkaTemplate<String, String> kafkaTemplate;  // 생성한 디폴트 카프카 템플릿을 injection 하는 부분
 
     public void sendMessage(String message) {
         System.out.println("produced message is: " + "'"+message+"'");
